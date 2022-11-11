@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academlo Store</title>
+  <link rel="icon" href="img/image_0-1c6d517563a5cd0f4cdfd8e8baee840a-92247e4d0ca8c5030055716b71637ac1.png"
+    sizes="32x32" type="icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- ! Cabecera Del Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav__logo-icon">
+          <g>
+            <g>
+              <path
+                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+              </path>
+            </g>
+          </g>
+        </svg> Store
+      </a>
+
+      <div class="nav__menu" id="navMenu">
+        <ul class="nav__list">
+          <li class="nav__items">
+            <a href="#home" class="nav__link link-active">Home</a>
+          </li>
+          <li class="nav__items">
+            <a href="#products" class="nav__link">Products</a>
+          </li>
+        </ul>
+
+        <div class="nav__close" id="navClose">
+          <i class='bx bx-x'></i>
+        </div>
+      </div>
+
+      <div class="nav__btns">
+        <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+        <div class="nav__shop" id="cart-shop">
+          <i class='bx bx-shopping-bag'></i>
+          <span id="cart-count" class="amount"></span>
+        </div>
+
+        <div class="nav__menu-icon" id="nav-toggle">
+          <i class='bx bx-grid-alt'></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ! Carrito -->
+  <div class="cart" id="cart">
+    <i class='bx bx-x cart__close' id="cart-close"></i>
+
+    <h2 class="cart__title">My Cart</h2>
+
+    <div class="cart__container"></div>
+
+    <div class="cart__prices">
+      <span class="cart__prices-item"><span id="items-count"></span> items</span>
+      <span class="cart__prices-total" id="cart-total"></span>
+    </div>
+
+    <div class="cart__checkout">
+      <button class="btn cart__btn" id="cart-checkout" disabled><i class='bx bxs-check-shield'></i> Checkout</button>
+    </div>
+
+  </div>
+
+  <!-- ! Cuerpo Principal De La Pagina-->
+  <main class="main">
+
+    <!-- Inicio -->
+    <section class="home" id="home">
+      <div class="home__container container grid" data-aos="fade-right">
+        <div class="home__content-img">
+          <img src="img/home.png" alt="" class="home__img-aside">
+        </div>
+
+        <div class="home__data-base" data-aos="fade-right">
+          <h1 class="home__title">New Sweatshirt <br> COLLECTIONS 2022</h1>
+          <p class="home__description">
+            Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern
+            design.
+          </p>
+          <span class="home__price">$14.00</span>
+
+          <div class="home__btns">
+            <a href="#" class="btn btn--gray btn--small">
+              Discover
+            </a>
+
+            <button class="btn home__btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Productos -->
+    <section class="products" id="products" data-aos="fade-left">
+      <div class="products__container container ">
+        <ul class="products__filter">
+          <li class="products__item p-line" data-filter="all">
+            <h3 class="products__title">
+              Show All
+            </h3>
+            <span class="products__stock">
+              show all product
+            </span>
+          </li>
+
+          <li class="products__item p-line products__active" data-filter=".hoodies">
+            <h3 class="products__title">
+              Hoodies
+            </h3>
+            <span class="products__stock">
+              3 products
+            </span>
+          </li>
+
+          <li class="products__item p-line" data-filter=".shirts">
+            <h3 class="products__title">
+              Shirts
+            </h3>
+            <span class="products__stock">
+              4 products
+            </span>
+          </li>
+
+          <li class="products__item" data-filter=".sweatshirts">
+            <h3 class="products__title">
+              Sweatshirts
+            </h3>
+            <span class="products__stock">
+              4 products
+            </span>
+          </li>
+        </ul>
+
+        <div class="products__content grid" id="products__content"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ! Footer -->
+  <footer class="footer section">
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <h3 class="footer__title">Our information</h3>
+
+        <ul class="footer__list">
+          <li>Cali - Colombia</li>
+        </ul>
+      </div>
+      <div class="footer__content">
+        <h3 class="footer__title">About Us</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#" class="footer__link">Support Center</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Customer Support</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Copy Right</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Product</h3>
+
+        <ul class="footer__links">
+          <li>
+            <a href="#" class="footer__link">Hoodies</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Shirts</a>
+          </li>
+          <li>
+            <a href="#" class="footer__link">Sweatshirt</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__content">
+        <h3 class="footer__title">Social</h3>
+
+        <ul class="footer__social">
+          <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+            <i class='bx bxl-facebook'></i>
+          </a>
+
+          <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+            <i class='bx bxl-twitter'></i>
+          </a>
+
+          <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+            <i class='bx bxl-instagram'></i>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <span class="footer__copy">&#169; Daniel Trujillo. All rigths reserved</span>
+  </footer>
+
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+  </a>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/helpers/mixitup.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  </script>
+</body>
+
+</html>
